@@ -1,0 +1,242 @@
+macro "macro"
+	elem 
+		name = "Center+REP"
+		command = ".center"
+	elem 
+		name = "Northeast+REP"
+		command = ".northeast"
+	elem 
+		name = "Southeast+REP"
+		command = ".southeast"
+	elem 
+		name = "Southwest+REP"
+		command = ".southwest"
+	elem 
+		name = "Northwest+REP"
+		command = ".northwest"
+	elem 
+		name = "West+REP"
+		command = ".west"
+	elem 
+		name = "North+REP"
+		command = ".north"
+	elem 
+		name = "East+REP"
+		command = ".east"
+	elem 
+		name = "South+REP"
+		command = ".south"
+
+
+menu "menu"
+	elem 
+		name = "&File"
+		command = ""
+		saved-params = "is-checked"
+	elem 
+		name = "&Options and Messages"
+		command = ".options"
+		category = "&File"
+		saved-params = "is-checked"
+	elem 
+		name = "Game Options"
+		command = "GameOptions"
+		category = "&File"
+		saved-params = "is-checked"
+	elem 
+		name = "Quit"
+		command = "Quit"
+		category = "&File"
+		saved-params = "is-checked"
+	elem 
+		name = "&Icons"
+		command = ""
+		saved-params = "is-checked"
+	elem 
+		name = "&64x64"
+		command = ".winset \"MainWindow.Main.icon-size=64\""
+		category = "&Icons"
+		saved-params = "is-checked"
+	elem 
+		name = "&32x32"
+		command = ".winset \"MainWindow.Main.icon-size=32\""
+		category = "&Icons"
+		saved-params = "is-checked"
+	elem 
+		name = "&16x16"
+		command = ".winset \"MainWindow.Main.icon-size=16\""
+		category = "&Icons"
+		saved-params = "is-checked"
+
+
+window "CharInfo"
+	elem "CharInfo"
+		type = MAIN
+		pos = 281,0
+		size = 640x480
+		anchor1 = -1,-1
+		anchor2 = -1,-1
+		is-visible = false
+		saved-params = "pos;size;is-minimized;is-maximized"
+	elem "CharacterInfobox"
+		type = BROWSER
+		pos = 0,0
+		size = 640x480
+		anchor1 = 0,0
+		anchor2 = 100,100
+		saved-params = ""
+
+window "MainWindow"
+	elem "MainWindow"
+		type = MAIN
+		pos = 0,0
+		size = 2544x1322
+		anchor1 = -1,-1
+		anchor2 = -1,-1
+		background-color = none
+		is-default = true
+		drop-zone = true
+		saved-params = "pos;size;is-maximized=true"
+		title = "Starwars"
+		icon = 'C:\\Users\\Xavier\\Pictures\\Untitleasdsadsadsadasdsadsadsad.png'
+		macro = "macro"
+		menu = "menu"
+		outer-size = 2560x1400
+		inner-size = 2544x1341
+	elem "OOC"
+		type = OUTPUT
+		pos = 1680,608
+		size = 864x496
+		anchor1 = 66,46
+		anchor2 = 100,84
+		font-family = "Arial"
+		font-size = 9
+		text-color = #ffffff
+		background-color = #000000
+		border = sunken
+		saved-params = "max-lines"
+	elem "info1"
+		type = INFO
+		pos = 1680,0
+		size = 864x608
+		anchor1 = 66,0
+		anchor2 = 100,46
+		text-color = #ffffff
+		background-color = #000000
+		is-default = true
+		saved-params = ""
+		tab-text-color = #ffffff
+		tab-background-color = #000000
+	elem "grid1"
+		type = GRID
+		pos = 1679,1102
+		size = 865x224
+		anchor1 = 66,83
+		anchor2 = 100,100
+		background-color = #292929
+		saved-params = ""
+		highlight-color = #000000
+	elem "OOCButton"
+		type = BUTTON
+		pos = 1736,1137
+		size = 206x39
+		anchor1 = 68,86
+		anchor2 = 76,89
+		text-color = #ffffff
+		background-color = #000000
+		saved-params = "is-checked"
+		text = "OOC"
+		command = "OOC"
+	elem "input1"
+		type = INPUT
+		pos = 1984,1137
+		size = 494x39
+		anchor1 = 78,88
+		anchor2 = 97,91
+		text-color = #ffffff
+		background-color = #000000
+		border = sunken
+		saved-params = ""
+		command = "OOC"
+	elem "Roleplaybox"
+		type = INPUT
+		pos = 1983,1257
+		size = 494x34
+		anchor1 = 78,93
+		anchor2 = 97,96
+		text-color = #ffffff
+		background-color = #000000
+		border = sunken
+		saved-params = ""
+		command = "Roleplay"
+	elem "IC"
+		type = OUTPUT
+		pos = -2,1032
+		size = 1682x296
+		anchor1 = 0,78
+		anchor2 = 66,100
+		font-family = "Arial"
+		font-size = 9
+		text-color = #ffffff
+		background-color = #000000
+		is-default = true
+		border = sunken
+		saved-params = "max-lines"
+	elem "Saybar"
+		type = INPUT
+		pos = 1983,1194
+		size = 494x39
+		anchor1 = 78,88
+		anchor2 = 97,91
+		text-color = #ffffff
+		background-color = #000000
+		border = sunken
+		saved-params = ""
+		command = "Say"
+	elem "Roleplay"
+		type = BUTTON
+		pos = 1736,1257
+		size = 206x34
+		anchor1 = 68,93
+		anchor2 = 76,96
+		text-color = #ffffff
+		background-color = #000000
+		saved-params = "is-checked"
+		text = "Roleplay"
+		command = "Roleplay"
+	elem "Say"
+		type = BUTTON
+		pos = 1736,1200
+		size = 206x39
+		anchor1 = 68,88
+		anchor2 = 76,91
+		text-color = #ffffff
+		background-color = #000000
+		saved-params = "is-checked"
+		text = "Say"
+		command = "Say"
+	elem "Main"
+		type = MAP
+		pos = -2,-5
+		size = 1682x1029
+		anchor1 = 0,0
+		anchor2 = 66,78
+		saved-params = "zoom;letterbox;zoom-mode"
+
+window "Profile"
+	elem "Profile"
+		type = MAIN
+		pos = 281,0
+		size = 640x480
+		anchor1 = -1,-1
+		anchor2 = -1,-1
+		is-visible = false
+		saved-params = "pos;size;is-minimized;is-maximized"
+	elem "Profile"
+		type = BROWSER
+		pos = 0,0
+		size = 640x496
+		anchor1 = 0,0
+		anchor2 = 100,100
+		saved-params = ""
+
